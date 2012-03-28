@@ -1,0 +1,3 @@
+${item.id}
+${item.name}
+${request.resource_url(item)}

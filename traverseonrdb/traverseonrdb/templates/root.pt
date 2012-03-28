@@ -1,0 +1,3 @@
+<p tal:repeat="item items">
+    <a href="${request.resource_url(context, item.name)}">${item.name}</a>
+</p>

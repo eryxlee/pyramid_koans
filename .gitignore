@@ -1,0 +1,6 @@
+*.pyc
+*.db
+.project
+.pydevproject
+*.old
+.DS_Store
