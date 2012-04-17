@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:tal="http://xml.zope.org/namespaces/tal">
+<head>
+  <title>Books</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <link rel="shortcut icon" href="${request.static_path('simplecrud:static/favicon.ico')}" />
+</head>
+<body>
+<h1>Add a book</h1>
+<br>
+<br>
+<br>
+${renderer.errorlist("global_error")}
+${renderer.begin(request.route_path('book_add'))}
+  <fieldset>
+    <legend>book properties:</legend>
+    name:${renderer.text("name", size=64)}${renderer.errorlist("name")}<br />
+    author: ${renderer.text("author", size=32)}${renderer.errorlist("author")}<br />
+    ISBN: ${renderer.text("ISBN", size=20)}${renderer.errorlist("ISBN")}<br />
+    price: ${renderer.text("price", value='0.0', size=20)}${renderer.errorlist("price")}<br />
+    desc: ${renderer.textarea("desc", cols=50, rows=10)}${renderer.errorlist("desc")}<br />
+  </fieldset>
+<br>
+<input name="submit" type="submit" value="  save  ">
+${renderer.end()}
+
+
+</body>
+</html>

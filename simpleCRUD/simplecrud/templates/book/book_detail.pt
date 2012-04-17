@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:tal="http://xml.zope.org/namespaces/tal">
+<head>
+  <title>Books</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <link rel="shortcut icon" href="${request.static_path('simplecrud:static/favicon.ico')}" />
+</head>
+<body>
+<h1>Book detail</h1>
+<br>
+<br>
+<br>
+<fieldset>
+    <legend>book properties:</legend>
+    name:${book.name}<br />
+    author: ${book.author}<br />
+    ISBN: ${book.ISBN}<br />
+    price: ${book.price}<br />
+    desc: ${book.desc}<br />
+</fieldset>
+<br>
+
+</body>
+</html>

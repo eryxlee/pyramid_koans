@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:tal="http://xml.zope.org/namespaces/tal">
+<head>
+  <title>Books</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <link rel="shortcut icon" href="${request.static_path('simplecrud:static/favicon.ico')}" />
+</head>
+<body>
+<h1>My Books</h1>
+<br>
+<br>
+<br>
+<table >
+  <tr>
+    <th width=50>No.</th>
+    <th width=200>Book Name</th>
+    <th width=200>Author</th>
+    <th width=200>ISBN</th>
+    <th width=100>Price</th>
+    <th>Op</th>
+  </tr>
+  <tr tal:repeat="item books">
+      <td tal:content="repeat.item.number">1</td>
+      <td ><a href="#" tal:content="item.name" tal:attributes="href string:${request.route_path('book_detail', id=item.id)}">name</a></td>
+      <td tal:content="item.author">author</td>
+      <td tal:content="item.ISBN">ISBN</td>
+      <td tal:content="item.price">5</td>
+      <td>
+        [<a href="#" tal:attributes="href string:${request.route_path('book_edit', id=item.id)}">edit</a>]
+        [<a href="#" tal:attributes="href string:${request.route_path('book_delete', id=item.id)}">delete</a>]
+      </td>
+  </tr>
+</table>
+<br>
+<br>
+<a href="${request.route_path('book_add')}">add a book</a>
+</body>
+</html>
