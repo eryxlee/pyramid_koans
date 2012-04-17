@@ -4,3 +4,5 @@
 .pydevproject
 *.old
 .DS_Store
+.idea
+*.egg-info
