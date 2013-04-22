@@ -6,3 +6,4 @@
 .DS_Store
 .idea
 *.egg-info
+Simple-TODO/Simple-TODO.sqlite
